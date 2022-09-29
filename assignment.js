@@ -44,10 +44,42 @@ function wordCount(text) {
     return count;
 }
 
-const string =  `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
+const string = `I am a teacher and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?`
 console.log(wordCount(string));
 
 
+/* 1.d */
+/* function varietyOfWords(text) {
+     function countString(str, letter) {
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str.charAt(i) == letter) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    const word = text.split(" ");
+    let count = 0;
+    let result;
+    let letterToCheck;
+    for (let i = 0; i < word.length; i++) {
+        letterToCheck = word[i];
+        result = countString(text, letterToCheck);
+        if(result === 1) {
+            count++;
+        }
+    }
+    return count;
+} */
+
+/* console.log(varietyOfWords(string)) */
+
+/* 2.a */
+
+for(let i = 0; i < 8; i++) {
+    console.log("#".repeat(i));
+}
 
 /* 2c */
 function reverseArray(arr) {
