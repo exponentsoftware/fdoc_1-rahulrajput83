@@ -49,31 +49,24 @@ console.log(wordCount(string));
 
 
 /* 1.d */
-/* function varietyOfWords(text) {
-     function countString(str, letter) {
-        let count = 0;
-        for (let i = 0; i < str.length; i++) {
-            if (str.charAt(i) == letter) {
-                count += 1;
+function varietyOfWords(text) {
+    let arr = []
+    text = text.replaceAll(/[^a-zA-Z0-9 :]/g, '');
+    arr = text.split(' ')
+    for (let i = 0; i < arr.length; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            if(arr[i] === arr[j]) {
+                swap = arr[j];
+                arr[j] = arr[arr.length - 1];
+                arr[arr.length - 1] = swap;
+                arr.pop();
             }
         }
-        return count;
     }
-    const word = text.split(" ");
-    let count = 0;
-    let result;
-    let letterToCheck;
-    for (let i = 0; i < word.length; i++) {
-        letterToCheck = word[i];
-        result = countString(text, letterToCheck);
-        if(result === 1) {
-            count++;
-        }
-    }
-    return count;
-} */
+    return arr.length;
+}
 
-/* console.log(varietyOfWords(string)) */
+console.log(varietyOfWords(string))
 
 /* 2.a */
 
