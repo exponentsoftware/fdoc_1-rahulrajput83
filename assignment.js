@@ -2,23 +2,25 @@
 
 
 function countWords(paragraph, first, second) {
-    let split = paragraph.replace(".", "").split(" ")
-    let countFirst = [];
-    let countSecond = [];
+    let split = paragraph.split(/[\s.]+/)
+    let countFirst = 0;
+    let countSecond = 0;
     for (let i = 0; i < split.length; i++) {
         if(split[i] === first) {
-            countFirst.push('one more');
+            countFirst++;
         }
         else if(split[i] === second) {
             countSecond++;
         }
     }
-    return countFirst;
+    return Number = {
+        first : countFirst,
+        second: countSecond
+    };
 }
 
 const paragraph = 'I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.';
-/* console.log(countWords(paragraph,'love', 'you')); */
-
+console.log(countWords(paragraph,'love', 'you'));
 
 
 
