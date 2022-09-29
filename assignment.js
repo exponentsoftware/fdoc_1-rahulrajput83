@@ -81,6 +81,17 @@ for(let i = 0; i < 8; i++) {
     console.log("#".repeat(i));
 }
 
+/* 2.b */
+var arr = [];
+while(arr.length < 7){
+    var r = Math.floor(Math.random() * 9) + 1;
+    if(arr.indexOf(r) === -1) {
+        arr.push(r)
+    };
+}
+console.log(arr);
+
+
 /* 2c */
 function reverseArray(arr) {
     return arr.reverse();
