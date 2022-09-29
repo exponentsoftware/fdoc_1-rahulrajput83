@@ -98,3 +98,23 @@ function reverseArray(arr) {
 }
 console.log(reverseArray(["A", "B", "C"]));
 ["C", "B", "A"]
+
+
+/* 2.d */
+function checkUniqueness(arr) {
+    let Array = [];
+    for(let i = 0; i < arr.length; i++) {
+        let val = arr[i]
+        if(Array.indexOf(val) !== -1) {
+            return false
+        }
+        Array.push(val)
+    }
+    return true
+}
+const arrOne = [1, 4, 6, 2, 1];
+console.log(checkUniqueness(arrOne));
+false
+const arrTwo = [1, 4, 6, 2, 3]
+console.log(checkUniqueness(arrTwo));
+true
